@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCG HM KAK KAK</title>
+</head>
+<style>
+    body {
+        font-family:sans-serif;
+        margin: 0 auto;
+        width:800px;
+    }
+
+    #listid{
+        font-size:25px;
+    }
+</style>
+<body>
+    <h1><u>รายชื่อผู้เล่นใช้โปรแกรมโกง (หลักฐาน)</u></h1>
+    <div id="listid">
+    </div>
+    
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    var userId = [{name:"SlotmachinezZ", img: "https://www.img.in.th/image/ORgx0J"},{name:"Q-Gu-Tea-I-Sas", img:"https://www.img.in.th/image/ORzBpc"}]
+    var ht = document.getElementById("listid")
+
+    function renderListId() {
+        let html = `<ul>`
+        userId.map((e)=> {
+            html += `<li>${e.name} -> <a target="_blank" href="${e.img}">${e.img}</a></li>`
+        })
+        html += `</ul>`
+
+        ht.innerHTML = html
+    }
+
+    renderListId()
+
+    })
+</script>
+</html>
